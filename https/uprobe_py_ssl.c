@@ -19,6 +19,8 @@ BPF_TABLE_PUBLIC("hash", struct data_key, struct data_value, https_data, 4096);
 
 
 int probe_SSL_rw_ex_enter(struct pt_regs *ctx,int *s, const void *buf) {
+        
+        #printf("test")
 
         struct data_key data_k = {};
         struct data_value data_v = {};
